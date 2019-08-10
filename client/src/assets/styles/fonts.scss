@@ -1,0 +1,206 @@
+// Weights
+$hairline-weight: 100;
+$thin-weight: 200;
+$light-weight: 300;
+$normal-weight: 400;
+$medium-weight: 500;
+$semibold-weight: 600;
+$bold-weight: 700;
+$xbold-weight: 800;
+$black-weight: 900;
+
+// Synonyms
+$regular-weight: $normal-weight;
+$book-weight: $light-weight;
+$xlight-weight: $hairline-weight;
+$ultralight-weight: $hairline-weight;
+$heavy-weight: $xbold-weight;
+
+// Include fonts
+// Order matters: normal, bold, italic, bold+italic
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: $normal-weight;
+  font-style: normal;
+  src: url("~@/assets/fonts/SourceSansPro-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: $medium-weight;
+  font-style: normal;
+  src: url("~@/assets/fonts/SourceSansPro-SemiBold.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: $bold-weight;
+  font-style: normal;
+  src: url("~@/assets/fonts/SourceSansPro-Bold.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: $normal-weight;
+  font-style: italic;
+  src: url("~@/assets/fonts/SourceSansPro-RegularItalic.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: $medium-weight;
+  font-style: italic;
+  src: url("~@/assets/fonts/SourceSansPro-SemiBoldItalic.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: $bold-weight;
+  font-style: italic;
+  src: url("~@/assets/fonts/SourceSansPro-BoldItalic.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LibreBaskerville";
+  font-weight: $normal-weight;
+  font-style: normal;
+  src: url("~@/assets/fonts/LibreBaskerville-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LibreBaskerville";
+  font-weight: $normal-weight;
+  font-style: italic;
+  src: url("~@/assets/fonts/LibreBaskerville-RegularItalic.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LibreBaskerville";
+  font-weight: $bold-weight;
+  font-style: normal;
+  src: url("~@/assets/fonts/LibreBaskerville-Bold.ttf") format("ttf");
+  font-display: swap;
+}
+
+body {
+  font-family: "SourceSansPro", sans-serif;
+  webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-weight: $normal-weight;
+  font-size: $font-size-normal;
+  line-height: 1.7;
+  margin-bottom: 1.55rem;
+  @include typography('p');
+}
+
+ul {
+  margin-left: 1rem;
+  margin-bottom: 1.55rem;
+  line-height: 1.7;
+
+  li {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1rem;
+      top: 9px;
+      display: block;
+      background: $color-primary-green;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.c-reset-list {
+  margin-left: 0;
+  margin-bottom: 1.55rem;
+
+  li {
+    &:before {
+      content: none;
+    }
+  }
+}
+
+blockquote {
+  margin-bottom: 1.55rem;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: $bold-weight;
+}
+
+small {
+  font-size: .7rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+blockquote {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1rem !important;
+  border-left: 5px solid $color-primary-light !important;
+  font-style: italic;
+}
+
+
+h1 {
+  font-family: "LibreBaskerville", serif;
+  @include typography('h1');
+}
+
+h2 {
+  font-family: "LibreBaskerville",
+    serif;
+  @include typography('h2');
+  margin-bottom: $spacing-m;
+}
+
+h3 {
+  font-family: "LibreBaskerville",
+    serif;
+  @include typography('h3');
+  margin-bottom: $spacing-m;
+}
+
+h4 {
+  font-family: "LibreBaskerville",
+    serif;
+  @include typography('h4');
+  margin-bottom: $spacing-m;
+}
+
+h5 {
+  font-family: "LibreBaskerville",
+    serif;
+  @include typography('h5');
+  margin-bottom: $spacing-m;
+}
+
+h6 {
+  font-family: "LibreBaskerville",
+    serif;
+  @include typography('h6');
+  margin-bottom: $spacing-m;
+}

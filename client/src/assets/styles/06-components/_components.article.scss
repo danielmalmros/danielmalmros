@@ -1,0 +1,36 @@
+.c-articles {
+  margin-top: 40px;
+}
+
+.c-article {
+  background-color: $color-primary-light;
+  padding: 20px;
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.c-article__meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.c-article__tag {
+  opacity: 0.7;
+}
+
+.c-article__header {
+  margin-bottom: 20px;
+}
+
+.c-article__read-btn {
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-left: $spacing-xs;
+  }
+}

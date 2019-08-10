@@ -1,0 +1,15 @@
+body {
+  background: $color-primary;
+  color: $color-white;
+  font-size: 16px;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-primary-green;
+  }
+}

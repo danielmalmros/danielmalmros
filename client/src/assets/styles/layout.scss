@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: block;
+  max-width: 680px;
+  padding: 0 6vw;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.container-wide {
+  display: block;
+  max-width: 1140px;
+  padding: 0 6vw;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.c-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.c-grid__item {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.c-grid__item--background {
+  background-color: $color-primary-light;
+}
+
+.u-image {
+  width: 100%;
+}
+
+
+// Utility spacing
+
+.u-margin-bottom-m {
+  margin-bottom: $spacing-m;
+}
