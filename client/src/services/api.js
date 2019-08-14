@@ -6,7 +6,7 @@ Vue.use(VueAxios, axios)
 
 export default () => {
   return axios.create({
-    baseURL: `http://localhost:1337`,
+    baseURL: process.env.VUE_APP_ENV_API,
     withCredentials: false,
     headers: {
       Accept: 'application/json',
