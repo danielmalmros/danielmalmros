@@ -4,7 +4,7 @@
       <header class="c-article__header">
         <h1 class="u-margin-bottom-m">{{ about.title }}</h1>
         <div>
-          <img class="u-image" :src="env + about.image.url" alt />
+          <img class="u-image" :src="env + about.image.url" loading="lazy" alt />
         </div>
       </header>
       <vue-markdown :source="about.description"></vue-markdown>
