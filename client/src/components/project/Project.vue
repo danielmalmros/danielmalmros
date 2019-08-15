@@ -6,7 +6,7 @@
           <header class="c-article__header">
             <h1 class="u-margin-bottom-m">{{ project.name }}</h1>
             <div v-if="project.image">
-              <img class="u-image" :src="'http://localhost:1337' + project.image.url" alt />
+              <img class="u-image" :src="env + project.image.url" alt />
             </div>
           </header>
           <vue-markdown :source="project.description"></vue-markdown>
@@ -22,7 +22,7 @@
         :controls-next-html="'&#10093;'"
       >
         <slide v-for="(image, index) in project.images" :key="index" :index="index">
-          <img class="u-image" :src="'http://localhost:1337' + image.url" alt />
+          <img class="u-image" :src="env + image.url" alt />
         </slide>
       </carousel-3d>
     </div>
@@ -76,7 +76,9 @@ export default {
   },
   props: ['id'],
   data() {
-    return {}
+    return {
+      env: process.env.VUE_APP_ENV_API
+    }
   },
   mounted() {
     this.$store.dispatch('loadProject', this.id)

@@ -4,7 +4,7 @@
       <header class="c-article__header">
         <h1 class="u-margin-bottom-m">{{ about.title }}</h1>
         <div>
-          <img class="u-image" :src="'http://localhost:1337' + about.image.url" alt />
+          <img class="u-image" :src="env + about.image.url" alt />
         </div>
       </header>
       <vue-markdown :source="about.description"></vue-markdown>
@@ -18,7 +18,11 @@ import VueMarkdown from 'vue-markdown'
 
 export default {
   name: 'About',
-
+  data() {
+    return {
+      env: process.env.VUE_APP_ENV_API
+    }
+  },
   components: {
     VueMarkdown
   },
