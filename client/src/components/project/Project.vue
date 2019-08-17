@@ -6,7 +6,7 @@
           <header class="c-article__header">
             <h1 class="u-margin-bottom-m">{{ project.name }}</h1>
             <div v-if="project.image">
-              <img class="u-image" :src="env + project.image.url" alt />
+              <img class="u-image" :src="project.image.url" alt />
             </div>
           </header>
           <vue-markdown :source="project.description"></vue-markdown>
@@ -22,7 +22,7 @@
         :controls-next-html="'&#10093;'"
       >
         <slide v-for="(image, index) in project.images" :key="index" :index="index">
-          <img class="u-image" :src="env + image.url" alt />
+          <img class="u-image" :src="image.url" alt />
         </slide>
       </carousel-3d>
     </div>
@@ -55,7 +55,7 @@
       <div v-if="project.video_id">
         <h3 class="u-margin-bottom-m">Promotion video</h3>
         <vue-plyr>
-          <div data-plyr-provider="vimeo" :data-plyr-embed-id="project.video_id"></div>
+          <div data-plyr-provider="vimeo" :data-plyr-embed-id="project.video_id" loading="lazy"></div>
         </vue-plyr>
       </div>
     </div>
