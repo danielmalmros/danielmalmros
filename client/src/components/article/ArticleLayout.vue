@@ -58,8 +58,10 @@ export default {
 pre[class*='language-'] {
   background-color: $color-primary-light;
   padding: 20px;
+  margin-top: 0;
   margin-right: -20px;
   margin-left: -20px;
+  margin-bottom: 1.55rem;
   border-radius: 0;
 }
 </style>
