@@ -1,6 +1,10 @@
 <template>
   <div class="c-articles" id="articles">
-    <article class="c-article" v-for="(article, index) in articlesData" :key="index">
+    <article
+      class="c-article"
+      v-for="(article, index) in articlesData.slice().reverse()"
+      :key="index"
+    >
       <span class="c-article__tag">{{article.tag}}</span>
 
       <div>
