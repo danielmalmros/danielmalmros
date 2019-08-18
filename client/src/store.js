@@ -22,54 +22,61 @@ export default new Vuex.Store({
     },
     project: {
       type: Object
-    }
+    },
+    loading: false
   },
   actions: {
     loadAbout({ commit }) {
-      about
-        .getAbout()
-        .then(r => r.data)
-        .then(about => {
-          commit('SET_ABOUT', about)
-        })
+      commit('SET_LOADING', true),
+        about
+          .getAbout()
+          .then(r => r.data)
+          .then(about => {
+            commit('SET_ABOUT', about), commit('SET_LOADING', false)
+          })
     },
 
     loadArticles({ commit }) {
-      articles
-        .getArticles()
-        .then(r => r.data)
-        .then(articles => {
-          commit('SET_ARTICLES', articles)
-        })
+      commit('SET_LOADING', true),
+        articles
+          .getArticles()
+          .then(r => r.data)
+          .then(articles => {
+            commit('SET_ARTICLES', articles), commit('SET_LOADING', false)
+          })
     },
 
     loadArticle({ commit }, id) {
-      articles
-        .getArticle(id)
-        .then(r => r.data)
-        .then(article => {
-          article = article[0]
-          commit('SET_ARTICLE', article)
-        })
+      commit('SET_LOADING', true),
+        articles
+          .getArticle(id)
+          .then(r => r.data)
+          .then(article => {
+            article = article[0]
+            commit('SET_ARTICLE', article), commit('SET_LOADING', false)
+          })
     },
 
     loadProjects({ commit }) {
-      projects
-        .getProjects()
-        .then(r => r.data)
-        .then(projects => {
-          commit('SET_PROJECTS', projects)
-        })
+      commit('SET_LOADING', true),
+        projects
+          .getProjects()
+          .then(r => r.data)
+          .then(projects => {
+            commit('SET_PROJECTS', projects), commit('SET_LOADING', false)
+          })
     },
 
     loadProject({ commit }, id) {
-      projects
-        .getProject(id)
-        .then(r => r.data)
-        .then(project => {
-          project = project[0]
-          commit('SET_PROJECT', project)
-        })
+      commit('SET_LOADING', true),
+        projects
+          .getProject(id)
+          .then(r => r.data)
+          .then(project => {
+            project = project[0]
+            commit('SET_PROJECT', project)
+            commit('SET_LOADING', false)
+          })
     }
   },
   mutations: {
@@ -91,6 +98,10 @@ export default new Vuex.Store({
 
     SET_PROJECT(state, project) {
       state.project = project
+    },
+
+    SET_LOADING(state, loading) {
+      state.loading = loading
     }
   }
 })
