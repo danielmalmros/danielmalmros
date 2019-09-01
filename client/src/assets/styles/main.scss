@@ -1,17 +1,16 @@
-@import "reset.scss";
-@import "variables.scss";
-@import "fonts.mixins.scss";
-@import "media-queries.scss";
-@import "fonts.scss";
-@import "root.scss";
-@import "layout.scss";
-@import "buttons.scss";
-
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'fonts.mixins.scss';
+@import 'media-queries.scss';
+@import 'fonts.scss';
+@import 'root.scss';
+@import 'layout.scss';
+@import 'buttons.scss';
 
 // @import "01-settings/_settings";
 // @import '02-tools/tools.mixins';
-@import "03-generic/_generic";
+// @import "03-generic/_generic";
 // @import "04-elements/_elements";
 // @import "05-objects/_objects";
-@import "06-components/_components";
+@import '06-components/_components';
 // @import "07-utilities/_utilities";

@@ -33,6 +33,9 @@ export default {
   height: 30px;
   margin: -7px 0 0 -45px;
   text-align: center;
+  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0.5;
 }
 
 .c-loading__frame {
@@ -97,6 +100,21 @@ export default {
   animation: loader 1.5s linear infinite;
   -moz-animation: loader 2s linear infinite;
   -o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @-webkit-keyframes loaders {

@@ -22,9 +22,6 @@
 
 <script>
 import Prism from 'prismjs'
-// Import PrismJS extensions
-import 'prismjs/themes/prism-okaidia.css'
-import 'prismjs/components/prism-scss'
 
 import VueMarkdown from 'vue-markdown'
 import { dateFormatter } from '@/mixins/date-formatter.mixins'
