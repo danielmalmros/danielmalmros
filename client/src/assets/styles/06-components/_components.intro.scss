@@ -1,10 +1,15 @@
 .c-intro {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 120px);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
+
+  @media (min-width: $large-breakpoint) {
+    height: calc(100vh - 40px);
+    padding-bottom: 40px;
+  }
 }
 
 .c-intro__caption {
