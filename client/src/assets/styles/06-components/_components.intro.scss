@@ -8,8 +8,12 @@
 }
 
 .c-intro__caption {
-  padding: 0 6vw 100px 6vw;
+  padding: 0 6vw 50px 6vw;
   max-width: 1300px;
+
+  @media (min-width: $medium-breakpoint) {
+    padding: 0 6vw 100px 6vw;
+  }
 
   @media (min-width: $large-breakpoint) {
     padding: 0 6vw 200px 6vw;
@@ -49,7 +53,7 @@
     opacity: 0.25;
   }
 
-  &>div {
+  & > div {
     display: block;
 
     &::before,

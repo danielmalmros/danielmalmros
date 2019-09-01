@@ -2,7 +2,7 @@
   <footer class="c-footer">
     <div class="container">
       <div class="c-footer__inner">
-        <span>All materials © Daniel Malmros 2019</span>
+        <span class="c-footer__copy">All materials © Daniel Malmros 2019</span>
         <div class="c-footer__social">
           <a class="c-link" href="https://twitter.com/dmalmros" target="_blank">
             <i class="fab fa-twitter fa-lg"></i>
@@ -41,6 +41,11 @@ export default {
 .c-footer__inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.c-footer__copy {
+  font-size: $font-size-caption;
 }
 
 .c-footer__social {

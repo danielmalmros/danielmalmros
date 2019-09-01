@@ -1,5 +1,5 @@
 <template>
-  <div class="c-articles" id="articles">
+  <div class="c-articles c-articles--preview" id="articles">
     <article
       class="c-article"
       v-for="(article, index) in articlesData.slice().reverse()"

@@ -114,18 +114,27 @@ export default {
 
 .c-project__general {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (min-width: $medium-breakpoint) {
+    flex-direction: row;
+  }
 }
 
 .c-project__general-item {
   display: flex;
-  width: 40%;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 20px;
 
   &:last-child {
     margin: 0;
+  }
+
+  @media (min-width: $medium-breakpoint) {
+    width: 40%;
   }
 }
 </style>

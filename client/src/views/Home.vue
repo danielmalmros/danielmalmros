@@ -1,7 +1,7 @@
 <template>
   <div>
     <intro></intro>
-    <div class="container">
+    <div class="container u-margin-top-reset">
       <articles-preview v-if="articles.length" :articles="articles"></articles-preview>
     </div>
   </div>

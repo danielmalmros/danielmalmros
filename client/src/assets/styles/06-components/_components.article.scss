@@ -1,5 +1,9 @@
 .c-articles {
-  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.c-articles--preview {
+  padding-top: 120px;
 }
 
 .c-article {
@@ -32,5 +36,11 @@
 
   i {
     margin-left: $spacing-xs;
+    transition: transform 0.3s ease;
+  }
+  &:hover {
+    i {
+      transform: translateX($spacing-xxs);
+    }
   }
 }

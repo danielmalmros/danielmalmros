@@ -3,15 +3,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
 
-  i {
-    transition: transform 0.3s ease;
-  }
-
   &:hover {
     color: $color-primary-green;
-
-    i {
-      transform: translateX(5px);
-    }
   }
 }

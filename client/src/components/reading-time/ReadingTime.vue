@@ -1,7 +1,7 @@
 <template>
   <span>
     {{readingTime}} min. read
-    <i class="fas fa-stopwatch"></i>
+    <i class="fas fa-stopwatch u-margin-left-xs"></i>
   </span>
 </template>
 
