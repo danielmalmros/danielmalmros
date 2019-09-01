@@ -11,7 +11,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 50px 6vw 0;
+  padding: 30px 6vw 0;
+
+  @media (min-width: $large-breakpoint) {
+    padding: 50px 6vw 0;
+  }
 }
 
 .c-header__nav {
@@ -19,6 +23,7 @@
 }
 
 .c-header__nav-item {
+  line-height: initial;
   margin-right: 15px;
 
   &:last-child {
