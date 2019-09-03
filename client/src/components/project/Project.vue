@@ -13,7 +13,7 @@
         </div>
       </article>
     </div>
-    <div v-if="project.images" class="container-wide">
+    <div v-if="project.images > 0" class="container-wide">
       <carousel-3d
         :border="0"
         :width="400"
