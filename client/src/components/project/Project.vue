@@ -6,7 +6,10 @@
           <header class="c-article__header">
             <h1 class="u-margin-bottom-m">{{ project.name }}</h1>
             <div v-if="project.image">
-              <img class="u-image" :src="project.image.url" alt />
+              <transition>
+                <img class="u-image" v-show="isLoad" :src="project.image.url" @load="loaded" />
+              </transition>
+              <div class="c-skeleton-img" v-show="!isLoad"></div>
             </div>
           </header>
           <vue-markdown :source="project.description"></vue-markdown>
@@ -77,7 +80,8 @@ export default {
   props: ['id'],
   data() {
     return {
-      env: process.env.VUE_APP_ENV_API
+      env: process.env.VUE_APP_ENV_API,
+      isLoad: false
     }
   },
   mounted() {
@@ -86,7 +90,11 @@ export default {
   computed: mapState({
     project: state => state.project
   }),
-  methods: {}
+  methods: {
+    loaded() {
+      this.isLoad = true
+    }
+  }
 }
 </script>
 
