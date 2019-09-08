@@ -69,6 +69,7 @@ export default new Vuex.Store({
 
     loadProject({ commit }, id) {
       commit('SET_LOADING', true),
+        commit('RESET_PROJECT'),
         projects
           .getProject(id)
           .then(r => r.data)
@@ -98,6 +99,10 @@ export default new Vuex.Store({
 
     SET_PROJECT(state, project) {
       state.project = project
+    },
+
+    RESET_PROJECT(state) {
+      state.project = {}
     },
 
     SET_LOADING(state, loading) {
