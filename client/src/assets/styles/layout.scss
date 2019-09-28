@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --app-height: 100%;
+}
+
 .container {
   display: block;
   max-width: 680px;

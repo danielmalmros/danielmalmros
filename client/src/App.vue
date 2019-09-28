@@ -19,7 +19,9 @@ export default {
     BottomFooter: () => import('@/components/core/Footer'),
     LoadingScreen: () => import('@/components/loading/LoadingScreen')
   },
-  computed: mapState(['loading'])
+  computed: {
+    ...mapState(['loading'])
+  }
 }
 </script>
 
