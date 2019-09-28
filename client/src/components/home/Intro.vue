@@ -3,7 +3,7 @@
     <div class="c-intro__caption">
       <h1>Frontend Developer geeking JavaScript and microinteractions.</h1>
     </div>
-    <a href="#articles" class="scroll-indicator">
+    <a @click="scroll" href="#articles" class="scroll-indicator">
       <div class="dots"></div>
     </a>
   </div>
@@ -16,7 +16,15 @@ export default {
     msg: String
   },
   computed: {},
-  methods: {}
+  methods: {
+    scroll() {
+      this.$ga.event({
+        eventCategory: "frontpage",
+        eventAction: "scroll",
+        eventValue: "scroll button pressed"
+      })
+    }
+  }
 }
 </script>
 
