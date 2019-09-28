@@ -6,12 +6,19 @@ import About from './views/About.vue'
 import Projects from './views/Projects.vue'
 import Project from './components/project/Project.vue'
 
+import NotFound from './components/404/404.vue';
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { 
+      path: '*',
+      name: '404',
+      component: NotFound
+    },
     {
       path: '/',
       name: 'home',

@@ -26,6 +26,10 @@
   line-height: initial;
   margin-right: 15px;
 
+  .router-link-active {
+    color: $color-primary-green;
+  }
+
   &:last-child {
     margin: 0;
   }
